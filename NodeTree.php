@@ -82,6 +82,7 @@ class Node {
     }
 
     // f(depth, path, name, value, children, closure)
+    // children are original chilren; closure() computes and returns new children resp. result values
     public function foldlazy ($func, $depth = 0, $path = array()) {
         $closure = function () use ($func, $depth, $path) {
             $children = array();
